@@ -8,7 +8,7 @@
  * Factory in the zooAnimalsApp.
  */
 angular.module('zooAnimalsApp')
-  .factory('AllDataService', function ($resource) {
+  .factory('AllData', function ($resource) {
     // Service logic
     // ...
     return $resource('http://tundrazoo.azurewebsites.net/api/viewAllDatas/:id');

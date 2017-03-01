@@ -38,10 +38,10 @@
           <md-button class="md-icon-button" aria-label="Map">
             <md-icon>map</md-icon>
           </md-button>
-          <md-button class="md-icon-button" aria-label="Edit">
+          <md-button class="md-icon-button" aria-label="Edit" ng-click="ctrl.editAnimal($event, animal, $index)">
             <md-icon>mode_edit</md-icon>
           </md-button>
-          <md-button class="md-icon-button" aria-label="Delete">
+          <md-button class="md-icon-button" aria-label="Delete" ng-click="ctrl.deleteAnimal(animal, $index)">
             <md-icon>delete</md-icon>
           </md-button>
         </md-card-actions>
@@ -52,7 +52,7 @@
   <nav mfb-menu position="br" effect="zoomin" label="Close"
        active-icon="ion-close" resting-icon="ion-plus-round"
        toggling-method="click">
-    <button mfb-button icon="ion-location" label="Add Zoo"></button>
-    <button mfb-button icon="ion-ios-paw" label="Add Animal"></button>
+    <button mfb-button icon="ion-location" label="Add Zoo" ng-click="ctrl.addZoo($event)"></button>
+    <button mfb-button icon="ion-ios-paw" label="Add Animal" ng-click="ctrl.addAnimal($event)"></button>
   </nav>
 </div>
