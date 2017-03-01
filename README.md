@@ -4,10 +4,10 @@ This project is generated with [yo angular generator](https://github.com/yeoman/
 version 0.16.0.
 
 ## Build & development
-`npm install`
-`grunt`
-`bower install`
-`grunt serve`
+`npm install
+grunt
+bower install
+grunt serve`
 
 ## Testing
 
