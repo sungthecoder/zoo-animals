@@ -4,8 +4,13 @@ This project is generated with [yo angular generator](https://github.com/yeoman/
 version 0.16.0.
 
 ## Build & development
+`npm install`
 
-Run `grunt` for building and `grunt serve` for preview.
+`grunt`
+
+`bower install`
+
+`grunt serve`
 
 ## Testing
 
