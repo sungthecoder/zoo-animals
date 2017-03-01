@@ -1,0 +1,18 @@
+md-toolbar.md-default-theme.md-hue-2:not(.md-menu-toolbar), md-toolbar.md-hue-2:not(.md-menu-toolbar) {  
+  color:white;
+  background-color: rgba(14, 14, 14, 0.9);
+}
+
+#license-footer {
+  align-self: flex-end;
+  padding: 16px 32px;
+  width: 100%;
+  text-align: center;
+  font-size: small;
+  border-top: 1px solid #ddd;
+}
+
+md-toolbar md-input-container label {
+    color: wheat;
+}
+

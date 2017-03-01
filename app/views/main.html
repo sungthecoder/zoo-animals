@@ -1,0 +1,58 @@
+<div class="header" layout="column">
+  <md-toolbar class="md-padding">
+    <div layout="row" layout-xs="column">
+      <h3><md-icon>face</md-icon> Zoo Animals</h3>
+      <span flex-gt-xs></span>
+      <md-input-container class="md-accet" flex-gt-xs="50" flex-xs>
+        <md-icon style="color:wheat">search</md-icon>
+        <input ng-model="ctrl.searchInput"
+          placeholder="search here"
+          style="color:wheat;">
+      </md-input-container>
+    </div>
+  </md-toolbar>
+</div>
+
+<div class="container">
+  <md-content layout="row" class="md-padding" layout-wrap flex>
+    <div ng-repeat="animal in ctrl.animals | filter:ctrl.filter"
+      flex-xs flex-gt-xs="50" flex-gt-sm="33" layout-xs="column" layout="row">
+      <md-card flex>
+        <img ng-src="{{ctrl.imagePath(animal.AnimalTypeDescription)}}"
+          class="md-card-image" alt="{{ animal.AnimalTypeDescription }}">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{ animal.AnimalName }}</span>
+            <span class="md-subhead"> {{ animal.AnimalTypeDescription }}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <md-icon>main</md-icon>
+          <address>
+            {{ animal.ZooName }} <br/>
+            {{ animal.ZooAddress }} <br />
+            {{ animal.ZooCity }}, {{ animal.ZooState }}, {{ animal.ZooZip }}
+          </address>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Map">
+            <md-icon>map</md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Edit">
+            <md-icon>mode_edit</md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Delete">
+            <md-icon>delete</md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </md-content>
+
+  <nav mfb-menu position="br" effect="zoomin" label="Close"
+       active-icon="ion-close" resting-icon="ion-plus-round"
+       toggling-method="click">
+    <button mfb-button icon="ion-location" label="Add Zoo"></button>
+    <button mfb-button icon="ion-ios-paw" label="Add Animal"></button>
+  </nav>
+</div>
