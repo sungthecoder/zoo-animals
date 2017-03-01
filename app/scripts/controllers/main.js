@@ -84,9 +84,18 @@ angular.module('zooAnimalsApp')
       });
     };
 
-    ctrl.deleteAnimal = function(toDelete, index) {
-      animal.delete({id: toDelete.AnimalID}, function(){
-        ctrl.animals.splice(index, 1);
+    ctrl.deleteAnimal = function(ev, toDelete, index) {
+      var confirm = $mdDialog.confirm()
+        .title('Are you sure to remove this animal?')
+        .textContent('This animal will be missed.')
+        .targetEvent(ev)
+        .ok('Please do it!')
+        .cancel("No, don't delete it!")
+
+        $mdDialog.show(confirm).then(function(){
+          animal.delete({id: toDelete.AnimalID}, function(){
+            ctrl.animals.splice(index, 1);
+        });
       });
     }
 
