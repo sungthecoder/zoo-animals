@@ -101,7 +101,15 @@ angular.module('zooAnimalsApp')
 
     ctrl.addZoo = function(ev) {
       closeMenu(ev);
-      console.log("Adding zoo");
+      var alert = $mdDialog.alert()
+        .parent(document.body)
+        .clickOutsideToClose(true)
+        .title('Sorry, this feature is still in pregress')
+        .textContent('Our developers are working hard to make this work!')
+        .ok('Got it!')
+        .targetEvent(ev);
+
+      $mdDialog.show(alert);
     };
 
     return ctrl;
